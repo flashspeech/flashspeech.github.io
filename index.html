@@ -14,6 +14,12 @@
 	<title>VoiceLCM: Efficient Large-Scale Speech Synthesizer via Latent Consistency Model</title>
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 
+  <style>
+    .audio-collection {
+  overflow-x: auto;
+}
+  </style>
+
 </head>
  
 
@@ -85,19 +91,49 @@
 
 <!--文字介绍部分-->
 <div class="container pt-5 mt-5 shadow p-5 mb-5 bg-white rounded"> 
-<h2 id="TTS" style="text-align:center;"><font color="000093">Text-to-speech</font></h2>
-<p style="text-align: justify;"><font color="061E61"> The below audio samples show the comparison ,<b> our VoiceCLM</b> . 
-<ul style="list-style-type:square">
-</ul>
+  
+  <h2 id="TTS" style="text-align:center;"><font color="000093">Text-to-speech</font></h2>
+  <p style="text-align: justify; color: #061E61">The audio samples below offer a comparative showcase featuring <b>our VoiceCLM</b> against several benchmark models, including Prompt, HierSpeech++, NaturalSpeech2, StyleTTS2, Valle Reproduce, Voicebox, and Voicebox Reproduce.</p> 
+  <ul style="list-style-type:square">
+  </ul>
 
+  <!-- 音频展示部分 -->
+  <div class="audio-collection" style="overflow-x: auto;">
+    <table style="width: 100%; border-collapse: separate; border-spacing: 10px;">
+      <tr>
+          <th style="text-align: center; padding: 8px; background-color: #f2f2f2;">Index</th>
+          <th style="text-align: center; padding: 8px; background-color: #f2f2f2;">VoiceCLM</th>
+          <th style="text-align: center; padding: 8px; background-color: #f2f2f2;">Prompt</th>
+          <th style="text-align: center; padding: 8px; background-color: #f2f2f2;">HierSpeech++</th>
+          <th style="text-align: center; padding: 8px; background-color: #f2f2f2;">NaturalSpeech2</th>
+          <th style="text-align: center; padding: 8px; background-color: #f2f2f2;">StyleTTS2</th>
+          <th style="text-align: center; padding: 8px; background-color: #f2f2f2;">Valle Reproduce</th>
+          <th style="text-align: center; padding: 8px; background-color: #f2f2f2;">Voicebox</th>
+          <th style="text-align: center; padding: 8px; background-color: #f2f2f2;">Voicebox Reproduce</th>
+      </tr>
+        <!-- 表格内容 -->
 
-<!--音频展示部分-->
+        <tr>
+          <td style="vertical-align: middle; text-align: center; background-color: #f2f2f2;">1</td>
+          <!-- 对每个音频文件重复下面这行，修改src属性为实际音频文件的路径 -->
+          <td><audio controls><source src="路径到/3s_ref/1.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+          <td><audio controls><source src="路径到/hierspeechpp/1.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+          <td><audio controls><source src="路径到/3s_ref/1.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+          <td><audio controls><source src="路径到/hierspeechpp/1.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+          <td><audio controls><source src="路径到/3s_ref/1.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+          <td><audio controls><source src="路径到/hierspeechpp/1.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+          <td><audio controls><source src="路径到/3s_ref/1.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+          <td><audio controls><source src="路径到/hierspeechpp/1.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+  
+      </tr>
 
+    </table>
+  </div>
+
+</div>
 
 
 </main>
-
-
 
 
 

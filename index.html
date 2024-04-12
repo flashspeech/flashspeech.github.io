@@ -105,19 +105,17 @@
 
           <th style="text-align: center; padding: 8px; background-color: #f2f2f2;">Prompt</th>
 
-          <th style="text-align: center; padding: 8px; background-color: #f2f2f2;">VoiceCLM</th>
+          <th style="text-align: center; padding: 8px; background-color: #f2f2f2;">Ground Truth</th>
 
-          <th style="text-align: center; padding: 8px; background-color: #f2f2f2;">HierSpeech++</th>
+          <th style="text-align: center; padding: 8px; background-color: #f2f2f2;">VoiceCLM</th>
 
           <th style="text-align: center; padding: 8px; background-color: #f2f2f2;">NaturalSpeech2</th>
 
-          <th style="text-align: center; padding: 8px; background-color: #f2f2f2;">StyleTTS2</th>
+          <th style="text-align: center; padding: 8px; background-color: #f2f2f2;">VALL-E</th>
 
-          <th style="text-align: center; padding: 8px; background-color: #f2f2f2;">Valle Reproduce</th>
+          <th style="text-align: center; padding: 8px; background-color: #f2f2f2;">CLaM-TTS</th>
 
-          <th style="text-align: center; padding: 8px; background-color: #f2f2f2;">Voicebox</th>
-
-          <th style="text-align: center; padding: 8px; background-color: #f2f2f2;">Voicebox Reproduce</th>
+          <th style="text-align: center; padding: 8px; background-color: #f2f2f2;">Mega-TTS</th>
       </tr>
         <!-- 表格内容 -->
     </table>
@@ -135,16 +133,15 @@
 
   const datasets = [
       "3s_ref",
-      "demo_s3_02",
-      "hierspeechpp",
+      "truth",
+      "demo_s2",
       "ns2",
-      "styletts2",
-      "valle_reproduce",
-      "voicebox",
-      "voicebox_reproduce"
+      "valle",
+      "CLAM",
+      "megaTTS"
   ];
   
-  for (let i = 0; i < 15; i++) {
+  for (let i = 0; i < 12; i++) {
       let row = `<tr>
           <td style="vertical-align: middle; text-align: center; background-color: #f2f2f2;">${i}</td>`;
       

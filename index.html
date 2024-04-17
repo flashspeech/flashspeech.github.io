@@ -82,7 +82,7 @@
   <div class="audio-collection" style="overflow-x: auto;">
     <table id="audioSamplesTable" style="width: 100%; border-collapse: separate; border-spacing: 10px;">
       <tr>
-          <th style="text-align: center; padding: 8px; background-color: #f2f2f2;">Text</th>
+          <th style="text-align: center; padding-left: 150px; padding-right: 150px; padding-top: 8px; padding-bottom: 8px; background-color: #f2f2f2;">Text</th>
 
           <th style="text-align: center; padding: 8px; background-color: #f2f2f2;">Prompt</th>
 
@@ -119,6 +119,8 @@
 </style>
 
 <script>
+
+
   const table = document.getElementById("audioSamplesTable");
 
   const datasets = [
@@ -152,7 +154,6 @@
     indexCell.style.verticalAlign = 'middle';
     indexCell.style.textAlign = 'center';
     indexCell.style.backgroundColor = '#f2f2f2';
-    indexCell.style.width = '600px'; 
     indexCell.textContent = text[i];
     row.appendChild(indexCell);
 
@@ -165,7 +166,7 @@
       source.type = 'audio/wav';
       source.onerror = function() {
         audioCell.textContent = 'None';
-        audioCell.className = 'center-text'; // Apply the centering styles
+        audioCell.className = 'center-text';
       };
       audio.appendChild(source);
       audioCell.appendChild(audio);
@@ -198,7 +199,7 @@
   <div class="audio-collection" style="overflow-x: auto;">
     <table id="audioSamplesTable2" style="width: 100%; border-collapse: separate; border-spacing: 10px;">
       <tr>
-          <th style="text-align: center; padding: 8px; background-color: #f2f2f2;">Index</th>
+        <th style="text-align: center; padding-left: 150px; padding-right: 150px; padding-top: 8px; padding-bottom: 8px; background-color: #f2f2f2;">Text</th>
 
           <th style="text-align: center; padding: 8px; background-color: #f2f2f2;">Prompt</th>
 
@@ -341,7 +342,7 @@
 <div class="audio-collection" style="overflow-x: auto;">
   <table id="audioSamplesTable4" style="width: 100%; border-collapse: separate; border-spacing: 10px;">
     <tr>
-        <th style="text-align: center; padding: 8px; background-color: #f2f2f2;">Index</th>
+      <th style="text-align: center; padding-left: 150px; padding-right: 150px; padding-top: 8px; padding-bottom: 8px; background-color: #f2f2f2;">Text</th>
         <!-- Add more headers as needed -->
         <th style="text-align: center; padding: 8px; background-color: #f2f2f2;">Model A</th>
         <th style="text-align: center; padding: 8px; background-color: #f2f2f2;">Model B</th>
@@ -355,13 +356,32 @@
   const table4 = document.getElementById("audioSamplesTable4");
   const datasets4 = ["demo_s3_02_diverse_v2", "demo_s3_02_diverse_v3", "demo_s3_02_diverse_v4"]; // Replace with actual model names or identifiers
 
+  const text3 = ['They moved thereafter cautiously about the hut groping before and about them to find something to show that Warrenton had fulfilled his mission.',
+                'And lay me down in thy cold bed and leave my shining lot.',
+                'Number ten, fresh nelly is waiting on you, good night husband.',
+                'Yea, his honourable worship is within, but he hath a godly minister or two with him, and likewise a leech.',
+                'Instead of shoes, the old man wore boots with turnover tops, and his blue coat had wide cuffs of gold braid.',
+                'The army found the people in poverty and left them in comparative wealth.',
+                'Thus did this humane and right minded father comfort his unhappy daughter, and her mother embracing her again, did all she could to soothe her feelings.',
+                'He was in deep converse with the clerk and entered the hall holding him by the arm.',
+                'Indeed, there were only one or two strangers who could be admitted among the sisters without producing the same result.',
+                "For if he's anywhere on the farm, we can send for him in a minute.",
+                'Their piety would be like their names, like their faces, like their clothes, and it was idle for him to tell himself that their humble and contrite hearts it might be paid a far-richer tribute of devotion than his had ever been. A gift tenfold more acceptable than his elaborate adoration.',
+                'The air and the earth are curiously mated and intermingled as if the one were the breath of the other.',
+                'I had always known him to be restless in his manner, but on this particular occasion he was in such a state of uncontrollable agitation that it was clear something very unusual had occurred.',
+                'His death in this conjuncture was a public misfortune.',
+                'It is this that is of interest to theory of knowledge.',
+                'For a few miles, she followed the line hitherto presumably occupied by the coast of Algeria, but no land appeared to the south.'];
+
+
+
   for (let i = 1; i <= 15; i++) { // Adjust the number of samples as needed
     let row = document.createElement('tr');
     let indexCell = document.createElement('td');
     indexCell.style.verticalAlign = 'middle';
     indexCell.style.textAlign = 'center';
     indexCell.style.backgroundColor = '#f2f2f2';
-    indexCell.textContent = i;
+    indexCell.textContent = text3[i];
     row.appendChild(indexCell);
 
     datasets4.forEach(dataset => {

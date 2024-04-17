@@ -22,18 +22,10 @@
 
 </head>
  
-
-
-
-
-
-
 <div class="container">
   
 
 	<header role="banner">
-		
-			
 		
 		
 	</header>
@@ -70,17 +62,8 @@
     Our experimental results demonstrate the superior performance of FlashSpeech. Notably, FlashSpeech can be about 20 times faster than other zero-shot speech synthesis systems while maintaining comparable performance in terms of voice quality and similarity. Furthermore, FlashSpeech demonstrates its versatility by efficiently performing tasks like voice conversion, speech editing, and diverse speech sampling.</font></p>
 </div>
 
-<!-- <div class="container pt-5 mt-5 shadow p-5 mb-5 bg-white rounded">
-  
-  <h2 id="TTS" style="text-align:center;"><font color="000093">Zero-Shot TTS</font></h2>
-  <p style="text-align: justify; color: #061E61">The audio samples below offer a comparison of <b><a href="链接地址" style="color: #061E61; text-decoration: none;">our FlashSpeech</a></b> between several baseline models, including NaturalSpeech2, VALL-E, CLAM-TTS, Mega-TTS.</p> 
-  <ul style="list-style-type:square">
-  </ul>
 
-</div> -->
-
-
-<!--文字介绍部分-->
+<!-- Part1 文字介绍部分-->
 <div class="container pt-5 mt-5 shadow p-5 mb-5 bg-white rounded">
   
   <h2 id="TTS" style="text-align:center;"><font color="000093">Zero-Shot TTS-Sample 1st Part</font></h2>
@@ -99,7 +82,7 @@
   <div class="audio-collection" style="overflow-x: auto;">
     <table id="audioSamplesTable" style="width: 100%; border-collapse: separate; border-spacing: 10px;">
       <tr>
-          <th style="text-align: center; padding: 8px; background-color: #f2f2f2;">Index</th>
+          <th style="text-align: center; padding: 8px; background-color: #f2f2f2;">Text</th>
 
           <th style="text-align: center; padding: 8px; background-color: #f2f2f2;">Prompt</th>
 
@@ -141,20 +124,36 @@
   const datasets = [
       "3s_ref",
       "truth",
-  
       "ns2",
       "valle",
       "CLAM",
       "megaTTS",
       "demo_s2",
   ];
+
+  const text = ['They moved thereafter cautiously about the hut groping before and about them to find something to show that Warrenton had fulfilled his mission.',
+                'And lay me down in thy cold bed and leave my shining lot.',
+                'Number ten, fresh nelly is waiting on you, good night husband.',
+                'Yea, his honourable worship is within, but he hath a godly minister or two with him, and likewise a leech.',
+                'Instead of shoes, the old man wore boots with turnover tops, and his blue coat had wide cuffs of gold braid.',
+                'The army found the people in poverty and left them in comparative wealth.',
+                'Thus did this humane and right minded father comfort his unhappy daughter, and her mother embracing her again, did all she could to soothe her feelings.',
+                'He was in deep converse with the clerk and entered the hall holding him by the arm.',
+                'Indeed, there were only one or two strangers who could be admitted among the sisters without producing the same result.',
+                'The air and the earth are curiously mated and intermingled as if the one were the breath of the other.',
+                'His death in this conjuncture was a public misfortune.',
+                'For a few miles, she followed the line hitherto presumably occupied by the coast of Algeria, but no land appeared to the south.'];
+
+
+
   for (let i = 0; i < 12; i++) {
     let row = document.createElement('tr');
     let indexCell = document.createElement('td');
     indexCell.style.verticalAlign = 'middle';
     indexCell.style.textAlign = 'center';
     indexCell.style.backgroundColor = '#f2f2f2';
-    indexCell.textContent = i;
+    indexCell.style.width = '600px'; 
+    indexCell.textContent = text[i];
     row.appendChild(indexCell);
 
     datasets.forEach(dataset => {
@@ -177,7 +176,6 @@
   }
 
   <!--文字介绍部分-->
-
 
 </script>
 
@@ -206,15 +204,6 @@
 
           <th style="text-align: center; padding: 8px; background-color: #f2f2f2;">Voicebox</th>
 
-<!-- 
-
-          <th style="text-align: center; padding: 8px; background-color: #f2f2f2;">NaturalSpeech2</th>
-
-          <th style="text-align: center; padding: 8px; background-color: #f2f2f2;">VALL-E</th>
-
-          <th style="text-align: center; padding: 8px; background-color: #f2f2f2;">CLaM-TTS</th>
-
-          <th style="text-align: center; padding: 8px; background-color: #f2f2f2;">Mega-TTS</th> -->
           <th style="text-align: center; padding: 8px; background-color: #f2f2f2;">FlashSpeech</th>
       </tr>
         <!-- 表格内容 -->
@@ -239,13 +228,29 @@
   const table2 = document.getElementById("audioSamplesTable2");
   const datasets2 = ["ref",  "vb","ours"];
 
+  const text2 = ['Thus did this humane and right minded father comfort his unhappy daughter and her mother embracing her again did all she could to soothe her feelings',
+                 'They moved thereafter cautiously about the hut groping before and about them to find something to show that warrenton had fulfilled his mission',
+                 'And lay me down in thy cold bed and leave my shining lot',
+                 'And the whole night the tree stood still and in deep thought',
+                 'Instead of shoes the old man wore boots with turnover tops and his blue coat had wide cuffs of gold braid',
+                 'The army found the people in poverty and left them in comparative wealth',
+                 'Yea his honourable worship is within but he hath a godly minister or two with him and likewise a leech',
+                 'He was in deep converse with the clerk and entered the hall holding him by the arm',
+                 'Number ten fresh nelly is waiting on you good night husband',
+                 'Rather a hypothetical question colonel but i should say it might be a fifty fifty proposition',
+                 'How much wood could a woodchuck chuck if a woodchuck could chuck wood',
+                 "When feline magicians enchant the city and crafty canine illusionists work to restore balance, don’t miss the uproarious clash in ‘magic and mischief: the paws of mystery.’",
+                 'Peter piper picked a peck of pickled peppers.',
+                 'Voicebox is the swiss army knife of text to speech acing multiple languages, changing voice styles, and dishing out custom samples.',
+                 "In a land where cat pirates sail the high seas and dog buccaneers chase their tails, embark on a swashbuckling comedy adventure in ‘furry buccaneers: the quest for the golden bone.’"];
+
   for (let i = 0; i < 15; i++) {
     let row = document.createElement('tr');
     let indexCell = document.createElement('td');
     indexCell.style.verticalAlign = 'middle';
     indexCell.style.textAlign = 'center';
     indexCell.style.backgroundColor = '#f2f2f2';
-    indexCell.textContent = i;
+    indexCell.textContent = text2[i];
     row.appendChild(indexCell);
 
     datasets2.forEach(dataset => {

@@ -11,7 +11,7 @@
 	<link rel="stylesheet" href="css/custom.css">
 	<link rel="stylesheet" href="css/normalize.css">
 
-	<title>VoiceLCM: Efficient Large-Scale Speech Synthesizer via Latent Consistency Model</title>
+	<title>FlashSpeech: Efficient Zero-Shot Speech Synthesis</title>
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 
   <style>
@@ -42,7 +42,7 @@
 <main role="main">
 		<article itemscope itemtype="https://schema.org/BlogPosting">
 
-            <h1 class="entry-title" itemprop="headline" align="center" ><font color="000093"  ><b>VoiceLCM: Efficient Large-Scale Speech Synthesizer via Latent Consistency Model</b></font></h1>
+            <h1 class="entry-title" itemprop="headline" align="center" ><font color="000093"  ><b>FlashSpeech: Efficient Zero-Shot Speech Synthesis</b></font></h1>
 			
 			<section itemprop="entry-text">
 				<br>
@@ -59,43 +59,41 @@
     }
   </style>
   
-  <div class="centered-link">
+  <!-- <div class="centered-link">
     <a href="">CODE LINK</a>
-  </div>
+  </div> -->
 
 
-  <p style="text-align: justify;"><font color="061E61">Recent progress in large-scale speech generation has been remarkably advanced by the language model and diffusion model. However,
-    the generation process of both methods is slow and computationally
-    intensive. Real-time speech generation using a lower computing
-    budget to achieve quality on par with previous work remains a significant challenge. In this paper, we present VoiceLCM, a large-scale
-    high-quality speech generation system achieving similar quality
-    with lower that 10% of the computational cost compared with previous work. VoiceLCM is built on the latent consistency model and
-    applies a novel adversarial consistency training approach that can
-    train from scratch without the need for a pre-trained teacher model.
-    Furthermore, we also propose a novel prosody generation module
-    that enhances the diversity of prosody, making the rhythm of the
-    speech sound more natural. The generation processes of VoiceLCM
-    can be achieved efficiently with one or two sampling steps while
-    maintaining high audio quality and high similarity with the prompt
-    in zero-shot speech generation. Our experimental results show the
-    superior performance of VoiceLCM. In particular, voiceLCM can
-    achieve more than 15x faster than other zero-shot TTS systems
-    with comparable performance in terms of voice quality, similarity,
-    and prosody. Meanwhile, VoiceLCM can also efficiently conduct
-    other speech-generation tasks such as voice conversion, speech
-    editing, diverse speech sampling, etc. The audio demos are available
-    at .</font></p>
+  <p style="text-align: justify;"><font color="061E61">
+    Recent progress in large-scale zero-shot speech synthesis has been significantly advanced by language models and diffusion models.  However, the generation process of both methods is slow and computationally intensive. Efficient speech synthesis using a lower computing budget to achieve quality on par with previous work remains a significant challenge. In this paper, we present FlashSpeech, a large-scale zero-shot speech synthesis system with approximately 5% of the inference time compared with previous work. FlashSpeech is built on the latent consistency model and applies a novel adversarial consistency training approach that can train from scratch without the need for a pre-trained diffusion model as the teacher. Furthermore,  a new prosody generator module enhances the diversity of prosody, making the rhythm of the speech sound more natural.
+    The generation processes of FlashSpeech can be achieved efficiently with one or two sampling steps while maintaining high audio quality and high similarity to the audio prompt for zero-shot speech generation.
+    Our experimental results demonstrate the superior performance of FlashSpeech. Notably, FlashSpeech can be about 20 times faster than other zero-shot speech synthesis systems while maintaining comparable performance in terms of voice quality and similarity. Furthermore, FlashSpeech demonstrates its versatility by efficiently performing tasks like voice conversion, speech editing, and diverse speech sampling.</font></p>
 </div>
 
+<!-- <div class="container pt-5 mt-5 shadow p-5 mb-5 bg-white rounded">
+  
+  <h2 id="TTS" style="text-align:center;"><font color="000093">Zero-Shot TTS</font></h2>
+  <p style="text-align: justify; color: #061E61">The audio samples below offer a comparison of <b><a href="链接地址" style="color: #061E61; text-decoration: none;">our FlashSpeech</a></b> between several baseline models, including NaturalSpeech2, VALL-E, CLAM-TTS, Mega-TTS.</p> 
+  <ul style="list-style-type:square">
+  </ul>
+
+</div> -->
 
 
 <!--文字介绍部分-->
-<div class="container pt-5 mt-5 shadow p-5 mb-5 bg-white rounded"> 
+<div class="container pt-5 mt-5 shadow p-5 mb-5 bg-white rounded">
   
-  <h2 id="TTS" style="text-align:center;"><font color="000093">Text-to-speech</font></h2>
-  <p style="text-align: justify; color: #061E61">The audio samples below offer a comparative showcase featuring <b>our VoiceCLM</b> against several benchmark models, including Prompt, HierSpeech++, NaturalSpeech2, StyleTTS2, Valle Reproduce, Voicebox, and Voicebox Reproduce.</p> 
+  <h2 id="TTS" style="text-align:center;"><font color="000093">Zero-Shot TTS-Sample 1st Part</font></h2>
+  <p style="text-align: justify; color: #061E61">The audio samples below offer a comparison of our FlashSpeech between several baseline models, including <a href="https://speechresearch.github.io/naturalspeech2/" style="color: #0000FF; text-decoration: underline;">NaturalSpeech2</a>
+    , <a href="https://www.microsoft.com/en-us/research/project/vall-e-x/vall-e/" style="color: #0000FF; text-decoration: underline;">VALL-E</a>
+    , <a href="https://clam-tts.github.io/" style="color: #0000FF; text-decoration: underline;">CLaM-TTS</a>
+    , <a href="https://mega-tts.github.io/demo-page/" style="color: #0000FF; text-decoration: underline;">Mega-TTS</a>
+    .</p> 
   <ul style="list-style-type:square">
   </ul>
+
+ 
+
 
 <!--   <!-- 音频展示部分 -->
   <div class="audio-collection" style="overflow-x: auto;">
@@ -107,7 +105,7 @@
 
           <th style="text-align: center; padding: 8px; background-color: #f2f2f2;">Ground Truth</th>
 
-          <th style="text-align: center; padding: 8px; background-color: #f2f2f2;">VoiceCLM</th>
+
 
           <th style="text-align: center; padding: 8px; background-color: #f2f2f2;">NaturalSpeech2</th>
 
@@ -116,6 +114,7 @@
           <th style="text-align: center; padding: 8px; background-color: #f2f2f2;">CLaM-TTS</th>
 
           <th style="text-align: center; padding: 8px; background-color: #f2f2f2;">Mega-TTS</th>
+          <th style="text-align: center; padding: 8px; background-color: #f2f2f2;">FlashSpeech</th>
       </tr>
         <!-- 表格内容 -->
     </table>
@@ -126,7 +125,15 @@
 
 </main>
 
-
+<style>
+  .center-text {
+    text-align: center; 
+    vertical-align: middle;
+    background-color: #f2f2f2; 
+    width: 100%;
+    height: 100%;
+  }
+</style>
 
 <script>
   const table = document.getElementById("audioSamplesTable");
@@ -134,28 +141,243 @@
   const datasets = [
       "3s_ref",
       "truth",
-      "demo_s2",
+  
       "ns2",
       "valle",
       "CLAM",
-      "megaTTS"
+      "megaTTS",
+      "demo_s2",
   ];
-  
   for (let i = 0; i < 12; i++) {
-      let row = `<tr>
-          <td style="vertical-align: middle; text-align: center; background-color: #f2f2f2;">${i}</td>`;
-      
-      datasets.forEach(dataset => {
-          row += `<td><audio controls><source src="./dataset/${dataset}/${i}.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>`;
-      });
-      
-      row += `</tr>`;
-      
-      table.innerHTML += row;
+    let row = document.createElement('tr');
+    let indexCell = document.createElement('td');
+    indexCell.style.verticalAlign = 'middle';
+    indexCell.style.textAlign = 'center';
+    indexCell.style.backgroundColor = '#f2f2f2';
+    indexCell.textContent = i;
+    row.appendChild(indexCell);
+
+    datasets.forEach(dataset => {
+      let audioCell = document.createElement('td');
+      let audio = document.createElement('audio');
+      audio.controls = true;
+      let source = document.createElement('source');
+      source.src = `./dataset/${dataset}/${i}.wav`;
+      source.type = 'audio/wav';
+      source.onerror = function() {
+        audioCell.textContent = 'None';
+        audioCell.className = 'center-text'; // Apply the centering styles
+      };
+      audio.appendChild(source);
+      audioCell.appendChild(audio);
+      row.appendChild(audioCell);
+    });
+
+    table.appendChild(row);
   }
+
+  <!--文字介绍部分-->
+
+
 </script>
 
 
+<!--文字介绍部分-->
+<div class="container pt-5 mt-5 shadow p-5 mb-5 bg-white rounded">
+  
+  <h2 id="TTS" style="text-align:center;"><font color="000093">Zero-Shot TTS-Sample 2rd Part</font></h2>
+  <p style="text-align: justify; color: #061E61">The audio samples below offer a comparison of our FlashSpeech between several baseline models, including <a href="https://voicebox.metademolab.com/zs_tts.html" style="color: #0000FF; text-decoration: underline;">Voicebox</a>
+ 
+
+    .</p> 
+  <ul style="list-style-type:square">
+  </ul>
+
+ 
+
+
+<!--   <!-- 音频展示部分 -->
+  <div class="audio-collection" style="overflow-x: auto;">
+    <table id="audioSamplesTable2" style="width: 100%; border-collapse: separate; border-spacing: 10px;">
+      <tr>
+          <th style="text-align: center; padding: 8px; background-color: #f2f2f2;">Index</th>
+
+          <th style="text-align: center; padding: 8px; background-color: #f2f2f2;">Prompt</th>
+
+          <th style="text-align: center; padding: 8px; background-color: #f2f2f2;">Voicebox</th>
+
+<!-- 
+
+          <th style="text-align: center; padding: 8px; background-color: #f2f2f2;">NaturalSpeech2</th>
+
+          <th style="text-align: center; padding: 8px; background-color: #f2f2f2;">VALL-E</th>
+
+          <th style="text-align: center; padding: 8px; background-color: #f2f2f2;">CLaM-TTS</th>
+
+          <th style="text-align: center; padding: 8px; background-color: #f2f2f2;">Mega-TTS</th> -->
+          <th style="text-align: center; padding: 8px; background-color: #f2f2f2;">FlashSpeech</th>
+      </tr>
+        <!-- 表格内容 -->
+    </table>
+  </div>
+
+</div>
+ -->
+
+</main>
+
+<style>
+  .center-text {
+    text-align: center; 
+    vertical-align: middle;
+    background-color: #f2f2f2; 
+    width: 100%;
+    height: 100%;
+  }
+</style>
+<script>
+  const table2 = document.getElementById("audioSamplesTable2");
+  const datasets2 = ["ref",  "vb","ours"];
+
+  for (let i = 0; i < 15; i++) {
+    let row = document.createElement('tr');
+    let indexCell = document.createElement('td');
+    indexCell.style.verticalAlign = 'middle';
+    indexCell.style.textAlign = 'center';
+    indexCell.style.backgroundColor = '#f2f2f2';
+    indexCell.textContent = i;
+    row.appendChild(indexCell);
+
+    datasets2.forEach(dataset => {
+      let audioCell = document.createElement('td');
+      let audio = document.createElement('audio');
+      audio.controls = true;
+      let source = document.createElement('source');
+      source.src = `./dataset_vb/${dataset}/${i}.wav`;
+      source.type = 'audio/wav';
+      source.onerror = function() {
+        audioCell.textContent = 'None';
+        audioCell.className = 'center-text';
+      };
+      audio.appendChild(source);
+      audioCell.appendChild(audio);
+      row.appendChild(audioCell);
+    });
+
+    table2.appendChild(row);
+  }
+
+  <!--文字介绍部分-->
+
+
+</script>
+
+<!-- 第三部分文字介绍 -->
+<div class="container pt-5 mt-5 shadow p-5 mb-5 bg-white rounded">
+  <h2 id="TTS" style="text-align:center;"><font color="000093">Voice Conversion</font></h2>
+  <p style="text-align: justify; color: #061E61">The audio samples below offer a further comparison of our FlashSpeech against YOURTTS and DDDM-VC.</p>
+</div>
+
+<!-- 第三部分音频展示部分 -->
+<div class="audio-collection" style="overflow-x: auto;">
+  <table id="audioSamplesTable3" style="width: 100%; border-collapse: separate; border-spacing: 10px;">
+    <tr>
+        <th style="text-align: center; padding: 8px; background-color: #f2f2f2;">Index</th>
+        <th style="text-align: center; padding: 8px; background-color: #f2f2f2;">Source</th>
+        <th style="text-align: center; padding: 8px; background-color: #f2f2f2;">Refence</th>
+        <th style="text-align: center; padding: 8px; background-color: #f2f2f2;">DDDM-VC</th>
+        <th style="text-align: center; padding: 8px; background-color: #f2f2f2;">YOURTTS</th>
+        <th style="text-align: center; padding: 8px; background-color: #f2f2f2;">FlashSpeech</th>
+        <!-- 更多表头根据需要添加 -->
+    </tr>
+    <!-- 表格内容由JavaScript动态生成 -->
+  </table>
+</div>
+<script>
+  const table3 = document.getElementById("audioSamplesTable3");
+  const datasets3 = ["ori", "ref", "dddm_vc", "yourtts", "norm"]; // 示例模型名称
+
+  for (let i = 1; i < 23; i++) { // 假设有10个样本
+    let row = document.createElement('tr');
+    let indexCell = document.createElement('td');
+    indexCell.style.verticalAlign = 'middle';
+    indexCell.style.textAlign = 'center';
+    indexCell.style.backgroundColor = '#f2f2f2';
+    indexCell.textContent = i;
+    row.appendChild(indexCell);
+
+    datasets3.forEach(dataset => {
+      let audioCell = document.createElement('td');
+      let audio = document.createElement('audio');
+      audio.controls = true;
+      let source = document.createElement('source');
+      source.src = `./dataset_vc/${dataset}/${i}.wav`; // 假设每个模型有自己的文件夹
+      source.type = 'audio/wav';
+      source.onerror = function() {
+        audioCell.textContent = 'None';
+        audioCell.className = 'center-text';
+      };
+      audio.appendChild(source);
+      audioCell.appendChild(audio);
+      row.appendChild(audioCell);
+    });
+
+    table3.appendChild(row);
+  }
+</script>
+
+<!-- 第四部分文字介绍 -->
+<div class="container pt-5 mt-5 shadow p-5 mb-5 bg-white rounded">
+  <h2 id="TTS" style="text-align:center;"><font color="000093">Diverse Speech sampling </font></h2>
+  <p style="text-align: justify; color: #061E61">The audio samples below showcase further capabilities of our FlashSpeech model, demonstrating its performance with additional challenging baselines.</p>
+</div>
+
+<!-- 第四部分音频展示部分 -->
+<div class="audio-collection" style="overflow-x: auto;">
+  <table id="audioSamplesTable4" style="width: 100%; border-collapse: separate; border-spacing: 10px;">
+    <tr>
+        <th style="text-align: center; padding: 8px; background-color: #f2f2f2;">Index</th>
+        <!-- Add more headers as needed -->
+        <th style="text-align: center; padding: 8px; background-color: #f2f2f2;">Model A</th>
+        <th style="text-align: center; padding: 8px; background-color: #f2f2f2;">Model B</th>
+        <th style="text-align: center; padding: 8px; background-color: #f2f2f2;">Model C</th>
+        <!-- ... -->
+    </tr>
+    <!-- Table contents will be generated by JavaScript -->
+  </table>
+</div>
+<script>
+  const table4 = document.getElementById("audioSamplesTable4");
+  const datasets4 = ["demo_s3_02_diverse_v2", "demo_s3_02_diverse_v3", "demo_s3_02_diverse_v4"]; // Replace with actual model names or identifiers
+
+  for (let i = 1; i <= 15; i++) { // Adjust the number of samples as needed
+    let row = document.createElement('tr');
+    let indexCell = document.createElement('td');
+    indexCell.style.verticalAlign = 'middle';
+    indexCell.style.textAlign = 'center';
+    indexCell.style.backgroundColor = '#f2f2f2';
+    indexCell.textContent = i;
+    row.appendChild(indexCell);
+
+    datasets4.forEach(dataset => {
+      let audioCell = document.createElement('td');
+      let audio = document.createElement('audio');
+      audio.controls = true;
+      let source = document.createElement('source');
+      source.src = `./dataset_diverse_sample/${dataset}/${i}.wav`; // Update the path as per your directory structure
+      source.type = 'audio/wav';
+      source.onerror = function() {
+        audioCell.textContent = 'Unavailable';
+        audioCell.className = 'center-text';
+      };
+      audio.appendChild(source);
+      audioCell.appendChild(audio);
+      row.appendChild(audioCell);
+    });
+
+    table4.appendChild(row);
+  }
+</script>
 
 
 <script>

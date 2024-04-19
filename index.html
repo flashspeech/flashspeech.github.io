@@ -17,25 +17,13 @@
   <style>
     * {
   box-sizing: border-box;
-  overflow-x: hidden; /* 防止水平滚动 */
+  overflow-x: auto; /* 防止水平滚动 */
 }
 
     .audio-collection {
   width: fit-content; /* 或者设置一个具体的宽度，使容器适应缩小后的表格 */
   overflow-x: auto; /* 如果表格仍超出容器范围，允许横向滚动 */
   overflow-y: hidden;
-}
-.scaled-table {
-  transform: scale(0.4);
-  transform-origin: top left;
-}
-.scaled-table2 {
-  transform: scale(0.8);
-  transform-origin: top left;
-}
-.scaled-table3 {
-  transform: scale(0.65);
-  transform-origin: top left;
 }
   </style>
 
@@ -83,7 +71,7 @@
 
 
 <!-- Part1 文字介绍部分-->
-<div style="height: 600px;" class="container pt-5 mt-5 shadow p-5 mb-5 bg-white rounded">
+<div class="container pt-5 mt-5 shadow p-5 mb-5 bg-white rounded">
   
   <h2 id="TTS" style="text-align:center;"><font color="000093">Zero-Shot TTS-Sample 1st Part</font></h2>
   <p style="text-align: justify; color: #061E61">The audio samples below offer a comparison of our FlashSpeech between several baseline models, including <a href="https://speechresearch.github.io/naturalspeech2/" style="color: #0000FF; text-decoration: underline;">NaturalSpeech2</a>
@@ -99,7 +87,7 @@
 
   <!-- 音频展示部分 -->
   <div class="audio-collection" style="overflow-x: auto;">
-    <table id="audioSamplesTable" class="scaled-table" style="width: 100%; border-collapse: separate; border-spacing: 10px;">
+    <table id="audioSamplesTable" style="width: 100%; border-collapse: separate; border-spacing: 10px;">
       <tr>
           <th style="text-align: center; padding-left: 150px; padding-right: 150px; padding-top: 8px; padding-bottom: 8px; background-color: #f2f2f2;">Text</th>
 
@@ -200,7 +188,7 @@
 
 
 <!--文字介绍部分-->
-<div style="height: 1200px;" class="container pt-5 mt-5 shadow p-5 mb-5 bg-white rounded">
+<div class="container pt-5 mt-5 shadow p-5 mb-5 bg-white rounded">
   
   <h2 id="TTS" style="text-align:center;"><font color="000093">Zero-Shot TTS-Sample 2rd Part</font></h2>
   <p style="text-align: justify; color: #061E61">The audio samples below offer a comparison of our FlashSpeech between several baseline models, including <a href="https://voicebox.metademolab.com/zs_tts.html" style="color: #0000FF; text-decoration: underline;">Voicebox</a>
@@ -215,7 +203,7 @@
 
  <!-- 音频展示部分 -->
   <div class="audio-collection" style="overflow-x: auto;">
-    <table class="scaled-table2" id="audioSamplesTable2" style="width: 100%; border-collapse: separate; border-spacing: 10px;">
+    <table id="audioSamplesTable2" style="width: 100%; border-collapse: separate; border-spacing: 10px;">
       <tr>
         <th style="text-align: center; padding-left: 150px; padding-right: 150px; padding-top: 8px; padding-bottom: 8px; background-color: #f2f2f2;">Text</th>
 
@@ -296,13 +284,13 @@
 </script>
 
 <!-- 第三部分文字介绍 -->
-<div style="height: 1200px;" class="container pt-5 mt-5 shadow p-5 mb-5 bg-white rounded">
+<div class="container pt-5 mt-5 shadow p-5 mb-5 bg-white rounded">
   <h2 id="TTS" style="text-align:center;"><font color="000093">Voice Conversion</font></h2>
   <p style="text-align: justify; color: #061E61">The audio samples below offer a further comparison of our FlashSpeech against YOURTTS and DDDM-VC.</p>
 
   <!-- 第三部分音频展示部分 -->
 <div class="audio-collection" style="overflow-x: auto;">
-  <table class="scaled-table3" id="audioSamplesTable3" style="width: 100%; border-collapse: separate; border-spacing: 10px;">
+  <table id="audioSamplesTable3" style="width: 100%; border-collapse: separate; border-spacing: 10px;">
     <tr>
         <th style="text-align: center; padding: 8px; background-color: #f2f2f2;">Index</th>
         <th style="text-align: center; padding: 8px; background-color: #f2f2f2;">Source</th>
@@ -353,13 +341,13 @@
 </script>
 
 <!-- 第四部分文字介绍 -->
-<div style="height: 1300px;" class="container pt-5 mt-5 shadow p-5 mb-5 bg-white rounded">
+<div class="container pt-5 mt-5 shadow p-5 mb-5 bg-white rounded">
   <h2 id="TTS" style="text-align:center;"><font color="000093">Diverse Speech sampling </font></h2>
   <p style="text-align: justify; color: #061E61">The audio samples below showcase further capabilities of our FlashSpeech model, demonstrating its performance with additional challenging baselines.</p>
 
   <!-- 第四部分音频展示部分 -->
 <div class="audio-collection" style="overflow-x: auto;">
-  <table class="scaled-table2" id="audioSamplesTable4" style="width: 100%; border-collapse: separate; border-spacing: 10px;">
+  <table id="audioSamplesTable4" style="width: 100%; border-collapse: separate; border-spacing: 10px;">
     <tr>
       <th style="text-align: center; padding-left: 150px; padding-right: 150px; padding-top: 8px; padding-bottom: 8px; background-color: #f2f2f2;">Text</th>
         <!-- Add more headers as needed -->

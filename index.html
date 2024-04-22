@@ -310,8 +310,9 @@
 <script>
   const table3 = document.getElementById("audioSamplesTable3");
   const datasets3 = ["ori", "ref", "dddm_vc", "yourtts", "norm"]; // 示例模型名称
-
-  for (let i = 1; i < 10; i++) { // 假设有10个样本
+  let n = 3; 
+  for (let i = 1; i < 7; i++) 
+  if (i % n === 0){ // 假设有10个样本
     let row = document.createElement('tr');
     let indexCell = document.createElement('td');
     indexCell.style.verticalAlign = 'middle';

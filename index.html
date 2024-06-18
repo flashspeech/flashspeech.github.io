@@ -75,7 +75,7 @@
 </div>
 
 
-<h2 id="TTS" style="text-align:center;"><font color="000093">Rebutal: OOD data, Model Comparison (VCTK)</font></h2>
+<h2 id="TTS" style="text-align:center;"><font color="000093">Rebuttal: OOD data, Model Comparison (VCTK)</font></h2>
   <p style="text-align: center; color: #061E61">The audio samples below offer a comparison of our FlashSpeech between several baseline models on OOD data, including 
     , <a href="https://www.microsoft.com/en-us/research/project/vall-e-x/vall-e/" style="color: #0000FF; text-decoration: underline;">VALL-E</a>
     , <a href="https://14484anon.github.io/demo14484/" style="color: #0000FF; text-decoration: underline;">P-Flow</a>
@@ -163,6 +163,97 @@
   <!--文字介绍部分-->
 
 </script>
+
+
+
+<h2 id="TTS" style="text-align:center;"><font color="000093">Rebuttal: Speaker’s Emotion Maintenance</font></h2>
+  <p style="text-align: center; color: #061E61">The audio samples below offer a comparison of our FlashSpeech between several baseline models on Speaker’s Emotion Maintenance, including 
+    , <a href="https://www.microsoft.com/en-us/research/project/vall-e-x/vall-e/" style="color: #0000FF; text-decoration: underline;">VALL-E</a>
+    , <a href="https://styletts2.github.io/" style="color: #0000FF; text-decoration: underline;">Style-tts2</a>
+    , <a href="https://14484anon.github.io/demo14484/" style="color: #0000FF; text-decoration: underline;">P-Flow</a>    .</p> 
+  <ul style="list-style-type:square">
+  </ul>
+
+<!-- Part1 文字介绍部分-->
+<div class="container pt-5 mt-5 shadow p-5 mb-5 bg-white rounded">
+
+  <!-- 音频展示部分 -->
+  <div class="audio-collection" style="overflow-x: auto;">
+    <table id="audioSamplesTableb" style="width: 100%; border-collapse: separate; border-spacing: 10px;">
+      <tr>
+          <th style="text-align: center; padding-left: 150px; padding-right: 150px; padding-top: 8px; padding-bottom: 8px; background-color: #f2f2f2;">Text</th>
+
+          <th style="text-align: center; padding: 8px; background-color: #f2f2f2;">Prompt</th>
+
+
+
+          <th style="text-align: center; padding: 8px; background-color: #f2f2f2;">P-Flow</th>
+
+          <th style="text-align: center; padding: 8px; background-color: #f2f2f2;">VALL-E</th>
+
+          <th style="text-align: center; padding: 8px; background-color: #f2f2f2;">StyleTTS2</th>
+
+          <th style="text-align: center; padding: 8px; background-color: #f2f2f2;">FlashSpeech</th>
+      </tr>
+        <!-- 表格内容 -->
+    </table>
+  </div>
+
+</div>
+
+<script>
+
+
+  const tableb = document.getElementById("audioSamplesTableb");
+
+  const datasetsb = [
+      "ref",
+      "styletts2",
+      "pflow",
+      "valle",
+      "ours",
+  ];
+
+  const textb = ['We have to reduce the number of plastic bags.',
+  'We have to reduce the number of plastic bags.',
+  'We have to reduce the number of plastic bags.',
+  'We have to reduce the number of plastic bags.',
+  'We have to reduce the number of plastic bags.'];
+
+
+
+  for (let i = 0; i < 5; i++) {
+    let row = document.createElement('tr');
+    let indexCell = document.createElement('td');
+    indexCell.style.verticalAlign = 'middle';
+    indexCell.style.textAlign = 'center';
+    indexCell.style.backgroundColor = '#f2f2f2';
+    indexCell.textContent = textb[i];
+    row.appendChild(indexCell);
+
+    datasetsa.forEach(dataset => {
+      let audioCell = document.createElement('td');
+      let audio = document.createElement('audio');
+      audio.controls = true;
+      let source = document.createElement('source');
+      source.src = `./dataset_emotion_maintenance/${dataset}/${i}.wav`;
+      source.type = 'audio/wav';
+      source.onerror = function() {
+        audioCell.textContent = 'None';
+        audioCell.className = 'center-text';
+      };
+      audio.appendChild(source);
+      audioCell.appendChild(audio);
+      row.appendChild(audioCell);
+    });
+
+    tableb.appendChild(row);
+  }
+
+  <!--文字介绍部分-->
+
+</script>
+
 
 
 <h2 id="TTS" style="text-align:center;"><font color="000093">Zero-Shot TTS-Sample 1st Part</font></h2>
